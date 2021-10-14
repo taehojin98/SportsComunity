@@ -1,0 +1,55 @@
+#서버의 포트번호를 설정하고 진입점의 기본값이 "/" 인데 이것을 "/blog"로 바꿈
+server:
+  port: 8000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    
+#매핑 메소드가 리턴할 때 리턴 값 앞에 프리픽스 리턴 값 뒤에 서픽스를 붙여서 반환하게 해준다.
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tempjth@gmail.com
+    password: rlilrwqybewkogqy
+    properties: 
+      mail:
+        smtp: 
+          auth: true
+          starttls: 
+            enable: true
+      
+  #MySQL 데이터 베이스 연동
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring?serverTimezone=Asia/Seoul
+    username: spring
+    password: spring
+    
+  jpa:
+    open-in-view: true #영속성 컨텍스트를 Controller단에서 시작하고 종료시킨다. false값을 주면 Service단에서 시작하고 종료된다.
+    hibernate:
+      ddl-auto: update #프로젝트를 재실행 할 때 마다 테이블을 새로 만든다.(나중에는 update로 바꿔야 함)
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #테이블을 만들 때  변수 명 그대로  피드가 만들어진다.
+      use-new-id-generator-mappings: false #jpa가 사용하는 기본 넘버링 전략을 사용하지 않는다.
+    show-sql: false #콘솔 창에 실행되는 sql문을 보여줌
+    properties: 
+      hibernate: 
+        format_sql: true #원래는 콘솔 창에 한 줄로 출력이 되는데 이것을 설정하면 예쁘게 출력 된다.
+  
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+ 
+cos: 
+  key: cos1234
+    
