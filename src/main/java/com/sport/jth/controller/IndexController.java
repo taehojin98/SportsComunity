@@ -297,7 +297,7 @@ public class IndexController {
 		//body오브젝트
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
 		params.add("grant_type", "authorization_code");
-		params.add("client_id", "3c8d21421486d9550227a2fa2e1fe0d6");
+		params.add("client_id", "client_id");
 		params.add("redirect_uri", "http://localhost:8000/auth/kakao/callback");
 		params.add("code", code);
 		
@@ -389,8 +389,8 @@ public class IndexController {
 		//body오브젝트
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
 		params.add("grant_type", "authorization_code");
-		params.add("client_id", "XrarIgbgdXwUBqddSK50");
-		params.add("client_secret", "I_cevInzEX");
+		params.add("client_id", "client_id");
+		params.add("client_secret", "client_secret");
 		params.add("code", code);
 		params.add("state", "STATE_STRING");
 		
@@ -479,8 +479,8 @@ public class IndexController {
 		
 		//body오브젝트
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
-		params.add("client_id", "287987745054-hh2ivi0n0so3h1bh3ir56k91tib0ga3d.apps.googleusercontent.com");
-		params.add("client_secret", "hXbaEri6aJRWxZdyMv6lpYh6");
+		params.add("client_id", "client_id");
+		params.add("client_secret", "client_secret");
 		params.add("code", code);
 		params.add("grant_type", "authorization_code");
 		params.add("redirect_uri", "http://localhost:8000/auth/google/callback");
@@ -574,9 +574,9 @@ public class IndexController {
 		
 		//body오브젝트
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
-		params.add("client_id", "378172483931199");
+		params.add("client_id", "client_id");
 		params.add("redirect_uri", "http://localhost:8000/auth/facebook/callback");
-		params.add("client_secret", "a1cdd70774ed275c47891c16a828a375");
+		params.add("client_secret", "client_secret");
 		params.add("code", code);
 		
 		HttpEntity<MultiValueMap<String, String>> facebookTokenRequest = 
